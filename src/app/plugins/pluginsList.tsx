@@ -6,11 +6,11 @@ import styles from "./page.module.css";
 import { GithubIcon } from "../icons/githubIcon";
 import type { Plugin } from "../../types/plugin";
 import Link from "next/link";
-import { CopyButton } from "../../components/CopyButton";
+import CopyButton from "../../components/CopyButton";
 
 const PAGE_SIZE = 9;
 
-export default function PluginsList({ plugins }: { plugins: Plugin[] }) {
+const PluginsList = ({ plugins }: { plugins: Plugin[] }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [search, setSearch] = React.useState("");
@@ -138,4 +138,6 @@ export default function PluginsList({ plugins }: { plugins: Plugin[] }) {
       )}
     </div>
   );
-}
+};
+
+export default PluginsList;

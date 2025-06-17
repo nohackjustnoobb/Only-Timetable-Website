@@ -29,7 +29,6 @@ jobs:
         working-directory: ./master
         run: |
           yarn run build
-          touch ./out/.nojekyll
         env:
           BASE_PATH: /Only-Timetable-Website
 

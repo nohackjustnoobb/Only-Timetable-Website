@@ -3,7 +3,7 @@ import path from "path";
 import type { Plugin } from "../../../types/plugin";
 import React from "react";
 import styles from "./page.module.css";
-import { CopyButton } from "../../../components/CopyButton";
+import CopyButton from "../../../components/CopyButton";
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), "public", "plugins.json");

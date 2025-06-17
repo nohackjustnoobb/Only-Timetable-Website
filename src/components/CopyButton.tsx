@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export function CopyButton({ link }: { link: string }) {
+const CopyButton = ({ link }: { link: string }) => {
   const [copied, setCopied] = React.useState(false);
 
   return (
@@ -17,4 +17,6 @@ export function CopyButton({ link }: { link: string }) {
       {copied ? "Copied!" : "Copy Plugin Link"}
     </button>
   );
-}
+};
+
+export default CopyButton;

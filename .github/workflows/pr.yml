@@ -1,4 +1,4 @@
-name: PR Check
+name: Check Plugins Meta
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - "master"
 
 jobs:
-  check-tsx:
+  check-plugins-meta:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

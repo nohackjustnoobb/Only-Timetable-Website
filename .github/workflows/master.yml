@@ -28,6 +28,8 @@ jobs:
         working-directory: ./master
         run: |
           yarn run build
+        env:
+          BASE_PATH: /Only-Timetable-Website
 
       - name: Checkout Static Repository
         uses: actions/checkout@v4

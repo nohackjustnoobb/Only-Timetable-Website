@@ -8,7 +8,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.glowWrapper}>
           <Image
-            src="/img/icon.png"
+            src={`${process.env.BASE_PATH}/img/icon.png`}
             alt="Only Timetable logo"
             width={144}
             height={144}
@@ -31,14 +31,19 @@ export default function Home() {
         </div>
         <div className={styles.imgRow}>
           <Image
-            src="/img/add_plugin.png"
+            src={`${process.env.BASE_PATH}/img/add_plugin.png`}
             alt="Add Plugin"
             width={200}
             height={200}
           />
-          <Image src="/img/plugin.png" alt="Plugin" width={200} height={200} />
           <Image
-            src="/img/search_by_plugin.png"
+            src={`${process.env.BASE_PATH}/img/plugin.png`}
+            alt="Plugin"
+            width={200}
+            height={200}
+          />
+          <Image
+            src={`${process.env.BASE_PATH}/img/search_by_plugin.png`}
             alt="Search by Plugin"
             width={200}
             height={200}
@@ -54,19 +59,19 @@ export default function Home() {
         </div>
         <div className={styles.imgRow}>
           <Image
-            src="/img/light_theme.png"
+            src={`${process.env.BASE_PATH}/img/light_theme.png`}
             alt="Light Theme"
             width={200}
             height={200}
           />
           <Image
-            src="/img/dark_theme.png"
+            src={`${process.env.BASE_PATH}/img/dark_theme.png`}
             alt="Dark Theme"
             width={200}
             height={200}
           />
           <Image
-            src="/img/theme_color.png"
+            src={`${process.env.BASE_PATH}/img/theme_color.png`}
             alt="Theme Color"
             width={200}
             height={200}
@@ -82,13 +87,23 @@ export default function Home() {
         </div>
         <div className={styles.imgRow}>
           <Image
-            src="/img/multilanguage.png"
+            src={`${process.env.BASE_PATH}/img/multilanguage.png`}
             alt="Multilanguage"
             width={200}
             height={200}
           />
-          <Image src="/img/search.png" alt="Search" width={200} height={200} />
-          <Image src="/img/route.png" alt="Route" width={200} height={200} />
+          <Image
+            src={`${process.env.BASE_PATH}/img/search.png`}
+            alt="Search"
+            width={200}
+            height={200}
+          />
+          <Image
+            src={`${process.env.BASE_PATH}/img/route.png`}
+            alt="Route"
+            width={200}
+            height={200}
+          />
         </div>
       </section>
 
@@ -100,7 +115,7 @@ export default function Home() {
         </div>
         <Link href="/plugins" className={styles.singleImgRow}>
           <Image
-            src="/img/plugin_marketplace.png"
+            src={`${process.env.BASE_PATH}/img/plugin_marketplace.png`}
             alt="Plugin Marketplace"
             width={200}
             height={200}

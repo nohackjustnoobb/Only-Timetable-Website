@@ -10,7 +10,7 @@ const Header = () => {
     <header className={styles.header}>
       <Link href="/" className={styles.headerLogo}>
         <Image
-          src="/img/icon.png"
+          src={`${process.env.BASE_PATH}/img/icon.png`}
           alt="Only Timetable logo"
           width={36}
           height={36}

@@ -7,11 +7,12 @@
 
 .searchInput {
   width: 100%;
-  max-width: 400px;
-  padding: 10px 16px;
+  max-width: 25rem;
+  margin: 0 2rem;
+  padding: 0.75rem 1rem;
   border: 1.5px solid rgba(var(--color-primary-rgb), 0.5);
   border-radius: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background: transparent;
   color: var(--color-text);
   transition: border 0.2s;

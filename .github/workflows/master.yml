@@ -1,0 +1,65 @@
+name: Build and Push
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+
+jobs:
+  check_date:
+    runs-on: ubuntu-22.04
+    name: Check latest commit
+    outputs:
+      should_run: ${{ steps.should_run.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: print latest_commit
+        run: echo ${{ github.sha }}
+
+      - id: should_run
+        continue-on-error: true
+        name: Check latest commit is less than a day
+        if: ${{ github.event_name == 'schedule' }}
+        run: test -z $(git rev-list --after="24 hours" ${{ github.sha }}) && echo "should_run=false" >> $GITHUB_OUTPUT
+
+  build_and_push:
+    needs: check_date
+    if: ${{ needs.check_date.outputs.should_run != 'false' }}
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          path: master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        working-directory: ./master
+        run: |
+          yarn install --frozen-lockfile
+
+      - name: Build Next Application
+        working-directory: ./master
+        run: |
+          yarn run build
+
+      - name: Checkout Static Repository
+        uses: actions/checkout@v4
+        with:
+          ref: static
+          path: static
+
+      - name: Copy the Git folder
+        run: |
+          cp -r ./static/.git ./master/out/
+
+      - name: Add and commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          cwd: ./master/out/

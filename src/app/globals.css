@@ -1,0 +1,73 @@
+:root {
+  --color-surface: #f5f5f5;
+  --color-surface-container: #fff;
+  --color-primary: #6e7fdf;
+  --foreground: #222222;
+  --color-surface-rgb: 245, 245, 245;
+  --color-primary-rgb: 110, 127, 223;
+  --color-surface-container-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #212121;
+    --color-surface-container: #1a1a1a;
+    --color-primary: #6e7fdf;
+    --foreground: #f5f5f5;
+    --color-surface-rgb: 33, 33, 33;
+    --color-primary-rgb: 110, 127, 223;
+    --color-surface-container-rgb: 26, 26, 26;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--color-surface);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.filledButton {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.filledButton:hover {
+  opacity: 0.8;
+}
+
+.outlinedButton {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.outlinedButton:hover {
+  opacity: 0.8;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,54 @@
+.header {
+  padding: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--color-primary);
+  background: rgba(var(--color-surface-container-rgb), 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+  backdrop-filter: blur(0.625rem);
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerTitle {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.headerNav {
+  display: flex;
+  gap: 1.125rem;
+}
+
+.headerLink {
+  color: var(--color-primary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.headerLink svg {
+  stroke-width: 1.5;
+}
+
+@media (max-width: 37.5rem) {
+  .headerLink {
+    gap: 0;
+  }
+
+  .headerLink span {
+    display: none;
+  }
+}

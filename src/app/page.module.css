@@ -1,0 +1,159 @@
+.home {
+  max-width: 70rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--foreground);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  margin: 3rem 0;
+  text-align: center;
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.sectionDesc {
+  font-size: 1.05rem;
+  color: var(--foreground);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.imgRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.imgRow img {
+  height: auto !important;
+  max-width: 12.5rem;
+  width: calc(33% - 1rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.imgRow span {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 12.5rem;
+  width: 12.5rem;
+  background: none;
+}
+
+.singleImgRow img {
+  max-width: 40rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.download {
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.downloadLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.downloadGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.downloadCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 37.5rem) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .imgRow :global(span) {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+
+.glowWrapper {
+  position: relative;
+}
+
+.glowWrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  filter: blur(2rem);
+  z-index: -1;
+}

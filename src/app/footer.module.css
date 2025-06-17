@@ -1,0 +1,27 @@
+.footer {
+  padding: 2rem;
+  padding-top: 3rem;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  text-align: center;
+  margin-top: auto;
+}
+
+.footerLinks {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footerLink {
+  color: var(--color-primary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.footerLink svg {
+  stroke-width: 1.5;
+}

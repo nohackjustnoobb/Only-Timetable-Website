@@ -31,6 +31,12 @@ export default function Home() {
         </div>
         <div className={styles.imgRow}>
           <Image
+            src={`${process.env.BASE_PATH}/img/marketplace.png`}
+            alt="Marketplace"
+            width={200}
+            height={200}
+          />
+          <Image
             src={`${process.env.BASE_PATH}/img/add_plugin.png`}
             alt="Add Plugin"
             width={200}
@@ -39,12 +45,6 @@ export default function Home() {
           <Image
             src={`${process.env.BASE_PATH}/img/plugin.png`}
             alt="Plugin"
-            width={200}
-            height={200}
-          />
-          <Image
-            src={`${process.env.BASE_PATH}/img/search_by_plugin.png`}
-            alt="Search by Plugin"
             width={200}
             height={200}
           />
